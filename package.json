@@ -1,0 +1,20 @@
+{
+  "name": "goit-node-cli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Maksym-Zyza/goit-node-cli.git",
+  "author": "Maksym-Zyza <91341747+Maksym-Zyza-cloudeou@users.noreply.github.com>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon src/contacts"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "nanoid": "^5.0.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
