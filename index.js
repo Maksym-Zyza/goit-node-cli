@@ -4,6 +4,7 @@ import {
   getContactById,
   addContact,
   removeContact,
+  updateContact,
 } from "./src/contacts.js";
 
 program
@@ -34,6 +35,10 @@ async function invokeAction({ action, id, ...data }) {
     case "remove":
       const deleteContact = await removeContact(id);
       return console.log(deleteContact);
+
+    case "update":
+      const updatedContact = await updateContact(id, data);
+      return console.log(updatedContact);
 
     default:
       console.warn("\x1B[31m Unknown action type!");
