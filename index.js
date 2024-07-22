@@ -5,7 +5,7 @@ import {
   addContact,
   removeContact,
   updateContact,
-} from "./src/contacts.js";
+} from "./contacts.js";
 
 program
   .option("-a, --action <type>", "choose action")
@@ -22,7 +22,7 @@ async function invokeAction({ action, id, ...data }) {
   switch (action) {
     case "list":
       const contacts = await listContacts();
-      return console.log(contacts);
+      return console.table(contacts);
 
     case "get":
       const oneContact = await getContactById(id);
